@@ -1,0 +1,23 @@
+@mixin container {
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+@mixin h1 {
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@mixin h2 {
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.15;
+}
+
+@mixin card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}

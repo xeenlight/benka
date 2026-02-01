@@ -1,0 +1,191 @@
+@use "../../styles/mixins" as *;
+
+.home {
+  &__hero {
+    padding: 64px 0 24px;
+  }
+
+  &__heroInner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+    align-items: center;
+
+    @media (max-width: 980px) { grid-template-columns: 1fr; }
+  }
+
+  &__badge {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.06);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  &__h1 { @include h1; margin: 14px 0 10px; }
+  &__h2 { @include h2; margin: 0 0 10px; }
+
+  &__lead { margin: 0; color: var(--muted); max-width: 56ch; }
+
+  &__cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+
+  &__stats {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+
+    @media (max-width: 680px) { grid-template-columns: 1fr; }
+  }
+
+  &__heroCard {
+    @include card;
+    overflow: hidden;
+  }
+
+  &__heroMedia {
+    height: 260px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(59,130,246,0.10));
+  }
+
+  &__heroNote {
+    padding: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  &__heroNoteTitle { font-weight: 800; }
+  &__heroNoteText { color: var(--muted); margin-top: 6px; }
+
+  &__muted { color: var(--muted); margin: 0 0 18px; }
+
+  &__finalCta {
+    padding: 54px 0;
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__finalInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__finalBtns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.stat {
+  @include card;
+  padding: 14px;
+
+  &__n { font-size: 22px; font-weight: 900; }
+  &__t { color: var(--muted); margin-top: 6px; font-size: 13px; }
+}
+
+.kicker {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 980px) { grid-template-columns: 1fr; }
+  }
+
+  &--1 { grid-template-columns: 1fr; }
+}
+
+.card {
+  @include card;
+  padding: 16px;
+
+  &__title { font-weight: 800; }
+  &__desc { color: var(--muted); margin-top: 8px; }
+  &__link { display: inline-block; margin-top: 12px; color: var(--text); opacity: .9; }
+
+  &--media { padding: 0; overflow: hidden; }
+  &__media {
+    height: 160px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(34,197,94,0.10));
+    border-bottom: 1px solid var(--border);
+  }
+
+  &--media .card__title,
+  &--media .card__desc,
+  &--media .card__link {
+    padding: 0 16px;
+  }
+  &--media .card__title { padding-top: 14px; }
+  &--media .card__link { padding-bottom: 16px; }
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+  @media (max-width: 980px) { grid-template-columns: 1fr; }
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  @media (max-width: 980px) { grid-template-columns: 1fr; }
+}
+
+.step {
+  @include card;
+  padding: 16px;
+
+  &__n { font-weight: 900; opacity: .8; }
+  &__t { margin-top: 10px; font-weight: 800; }
+  &__d { margin-top: 8px; color: var(--muted); }
+}
+
+.link { color: var(--text); opacity: .9; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+/* ✅ универсальная сетка: сама решает, сколько колонок помещается */
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* ✅ для 300px делаем 1 колонку гарантированно */
+@media (max-width: 360px) {
+  section { padding: 44px 0; }
+
+  .home__heroInner { gap: 14px; }
+  .home__cta { flex-direction: column; align-items: stretch; }
+  .home__cta .btn { width: 100%; }
+
+  .home__stats { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+
+  .home__finalInner { flex-direction: column; align-items: stretch; }
+  .home__finalBtns { flex-direction: column; }
+  .pill { width: 100%; justify-content: center; text-align: center; }
+}
