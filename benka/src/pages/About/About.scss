@@ -110,8 +110,12 @@
     justify-content: space-between;
     gap: 14px;
     flex-wrap: wrap;
-  }
 
+    @media (max-width: 1030px) {
+            display: flex;
+          justify-content: center;
+    }
+      }
   &__ctaBtns {
     display: flex;
     gap: 10px;

@@ -16,6 +16,7 @@
   &:active { transform: translateY(0); }
 
   &--primary {
+    width: 100%;
     border-color: rgba(59,130,246,0.35);
     background: rgba(59,130,246,0.18);
   }
