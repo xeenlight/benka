@@ -4,6 +4,7 @@
   },
 
   "nav": {
+    "home": "Bosh sahifa",
     "about": "Biz haqimizda",
     "services": "Xizmatlarimiz",
     "industries": "Sohaviy yechimlar",
@@ -180,22 +181,20 @@
       "addrLabel": "Manzil",
       "addr": "Toshkent, O‘zbekiston"
     },
-    "form": {
-      "title": "So‘rov",
-      "desc": "Formani to‘ldiring.",
-      "name": "Ismingiz",
-      "phone": "Telefon",
-      "email": "Email",
-      "message": "Xabar",
-      "submit": "Yuborish",
-      "sent": "So‘rov yuborildi."
+    "map": {
+      "title": "Ofisimiz xaritada",
+      "desc": "Marshrut tuzing va tashrif buyuring — sizni kutamiz.",
+      "open": "Xaritada ochish"
     }
   },
 
   "footer": {
-    "desc": "Bino va inshootlarni professional loyihalash.",
-    "quick": "Tezkor havolalar",
-    "contacts": "Kontaktlar"
+    "desc": "Binolar va inshootlarni professional loyihalash.",
+    "linksTitle": "Tezkor havolalar",
+    "contactsTitle": "Aloqa",
+    "address": "Toshkent, Oʻzbekiston",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "langTitle": "Til"
   },
   "servicesPage": {
     "kicker": "Xizmatlarimiz",

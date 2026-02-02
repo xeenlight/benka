@@ -1,6 +1,6 @@
 .servicesPage {
   &__hero {
-    padding: 72px 0;
+    padding: 30px 0;
   }
 
   &__heroInner {
@@ -778,9 +778,6 @@
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.28);
-    backdrop-filter: blur(6px);
     display: grid;
     place-items: center;
   }
@@ -1033,6 +1030,42 @@
 
 /* ✅ сама иконка внутри через mask */
 .svcRow__icon::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+
+  /* 🔥 такой же градиент как у других */
+  background: var(--accent-gradient);
+
+  -webkit-mask-image: var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: var(--icon);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+
+.typeCard2__badgeIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  flex: 0 0 auto;
+
+  background: rgba(90, 140, 220, 0.18);
+  border: 1px solid rgba(90, 140, 220, 0.35);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.20);
+
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+/* ✅ сама иконка внутри через mask */
+.typeCard2__badgeIcon::after {
   content: "";
   width: 22px;
   height: 22px;

@@ -161,6 +161,8 @@
 
 .link { color: var(--text); opacity: .9; }
 .pill {
+  width: 100%;
+  justify-content: center;
   display: inline-flex;
   align-items: center;
   padding: 12px 14px;

@@ -4,6 +4,7 @@
   },
 
   "nav": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
     "industries": "Industry solutions",
@@ -180,22 +181,20 @@
       "addrLabel": "Address",
       "addr": "Tashkent, Uzbekistan"
     },
-    "form": {
-      "title": "Request",
-      "desc": "Fill in the form.",
-      "name": "Your name",
-      "phone": "Phone",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send",
-      "sent": "Request sent."
+    "map": {
+      "title": "Our office on the map",
+      "desc": "Build a route and visit us — we’ll be happy to meet you.",
+      "open": "Open in maps"
     }
   },
 
   "footer": {
     "desc": "Professional design of buildings and structures.",
-    "quick": "Quick links",
-    "contacts": "Contacts"
+    "linksTitle": "Quick links",
+    "contactsTitle": "Contacts",
+    "address": "Tashkent, Uzbekistan",
+    "rights": "All rights reserved.",
+    "langTitle": "Language"
   },
   "servicesPage": {
     "kicker": "Services",

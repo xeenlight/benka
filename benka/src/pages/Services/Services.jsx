@@ -26,6 +26,15 @@ import shield from "../../image/shield.png";
 import multiple from "../../image/multiple.png";
 import support from "../../image/support.png";
 
+import building from "../../image/building.png";
+import briefcase from "../../image/briefcase.png";
+import time from "../../image/time.png";
+
+import institute from "../../image/institute.png";
+import medical from "../../image/medical.png";
+import ball from "../../image/ball.png";
+import factory from "../../image/factory.png";
+
 export default function Services() {
   const { t } = useTranslation();
 
@@ -45,7 +54,12 @@ export default function Services() {
   // ✅ иконки для шагов процесса (5 шт)
   const stepIcons = [communication, analysis, business, idea, badge];
 
-  const useIcons = [communication, shield, multiple, support];
+  const useIcons = [time, shield, multiple, support];
+
+  const badgeIcons = [building, briefcase, analysis];
+
+  const alsoIcons = [institute, medical, ball, factory];
+
 
   return (
     <div className="servicesPage">
@@ -282,7 +296,12 @@ export default function Services() {
                   <div className="typeCard2__media">
                     <div className="typeCard2__img" aria-hidden="true" />
                     <div className="typeCard2__badge" aria-hidden="true">
-                      <div className="typeCard2__badgeIcon" />
+
+                                            <div
+  className="typeCard2__badgeIcon"
+  aria-hidden="true"
+  style={{ ["--icon"]: `url(${badgeIcons[idx] || badgeIcons[0]})` }}
+/>
                     </div>
                   </div>
 
@@ -315,7 +334,12 @@ export default function Services() {
               <div className="alsoPanel__grid">
                 {also.map((x, idx) => (
                   <div className="alsoTile" key={`${x}-${idx}`}>
-                    <div className="alsoTile__icon" aria-hidden="true" />
+                                                                <div
+  className="typeCard2__badgeIcon"
+  aria-hidden="true"
+  style={{ ["--icon"]: `url(${alsoIcons[idx] || alsoIcons[0]})` }}
+/>
+
                     <div className="alsoTile__text">{x}</div>
                   </div>
                 ))}

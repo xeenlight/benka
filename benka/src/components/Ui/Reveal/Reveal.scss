@@ -9,7 +9,7 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
     filter: blur(0);
-        margin-bottom: 20px;
+
   }
 
   &--fade { transform: none; }
@@ -26,5 +26,6 @@
     transform: none !important;
     filter: none !important;
     transition: none !important;
+    
   }
 }

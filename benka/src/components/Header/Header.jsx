@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Container from "../Ui/Container";
 import Button from "../Ui/Button";
 import "./Header.scss";
-
+import logo from "../../image/header_logo_down2.png";
 const nav = [
   { to: "/about", key: "nav.about" },
   { to: "/services", key: "nav.services" },
@@ -75,8 +75,7 @@ export default function Header() {
     <header className="header">
       <Container className="header__inner">
         <NavLink to="/" className="header__brand" aria-label="Benka" onClick={closeMenu}>
-          <span className="header__logo" />
-          <span className="header__name">Benka</span>
+          <img className="header__logo" src={logo} alt="Benka" />
         </NavLink>
 
         {/* desktop nav (оставляем как есть для больших экранов) */}

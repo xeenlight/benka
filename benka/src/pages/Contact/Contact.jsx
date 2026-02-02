@@ -1,26 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "../../components/Ui/Container";
-import Button from "../../components/Ui/Button";
 import Reveal from "../../components/Ui/Reveal/Reveal";
+import "./Contact.scss";
 
 export default function Contact() {
   const { t } = useTranslation();
 
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
+  // ✅ Вариант 2: Яндекс (тоже embed, но тебе нужно будет вставить свой конструкторный URL)
+  // Получается так: Yandex Maps → Поделиться → Встроить карту → копируешь src из iframe
+const yandexSrc =
+  "https://yandex.ru/map-widget/v1/?ll=69.245303%2C41.312328&z=16&pt=69.245303,41.312328,pm2rdm";
 
-  const onChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+const useYandex = true;
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    alert(t("contact.form.sent"));
-    setForm({ name: "", phone: "", email: "", message: "" });
-  };
+
 
   return (
     <section className="page">
@@ -46,90 +40,56 @@ export default function Contact() {
               <div className="pcard__title">{t("contact.info.title")}</div>
               <div className="pcard__desc">{t("contact.info.desc")}</div>
 
-              <div className="pcard__meta" style={{ marginTop: 14 }}>
+              <div className="pcard__meta contactMeta">
                 <div>
                   <b>{t("contact.info.phoneLabel")}:</b>{" "}
                   <a href="tel:+998998892586">(+99899) 889 25 86</a>
                 </div>
-                <div style={{ marginTop: 8 }}>
+
+                <div className="contactMeta__row">
                   <b>{t("contact.info.emailLabel")}:</b>{" "}
                   <a href="mailto:info@zikkurat.uz">info@zikkurat.uz</a>
                 </div>
-                <div style={{ marginTop: 8 }}>
+
+                <div className="contactMeta__row">
                   <b>{t("contact.info.addrLabel")}:</b> {t("contact.info.addr")}
                 </div>
               </div>
             </div>
           </Reveal>
 
-          {/* FORM */}
+          {/* MAP */}
           <Reveal variant="up" delay={80}>
-            <form className="pcard" onSubmit={onSubmit}>
-              <div className="pcard__title">{t("contact.form.title")}</div>
-              <div className="pcard__desc">{t("contact.form.desc")}</div>
+            <div className="pcard">
+              <div className="pcard__title">{t("contact.map.title")}</div>
+              <div className="pcard__desc">{t("contact.map.desc")}</div>
 
-              <div style={{ marginTop: 14, display: "grid", gap: 10 }}>
-                <Reveal variant="up" delay={0}>
-                  <input
-                    name="name"
-                    value={form.name}
-                    onChange={onChange}
-                    placeholder={t("contact.form.name")}
-                    style={inputStyle}
-                  />
-                </Reveal>
-
-                <Reveal variant="up" delay={70}>
-                  <input
-                    name="phone"
-                    value={form.phone}
-                    onChange={onChange}
-                    placeholder={t("contact.form.phone")}
-                    style={inputStyle}
-                  />
-                </Reveal>
-
-                <Reveal variant="up" delay={140}>
-                  <input
-                    name="email"
-                    value={form.email}
-                    onChange={onChange}
-                    placeholder={t("contact.form.email")}
-                    style={inputStyle}
-                  />
-                </Reveal>
-
-                <Reveal variant="up" delay={210}>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={onChange}
-                    placeholder={t("contact.form.message")}
-                    rows={5}
-                    style={inputStyle}
-                  />
-                </Reveal>
-
-                <Reveal variant="up" delay={280}>
-                  <Button variant="primary" type="submit">
-                    {t("contact.form.submit")}
-                  </Button>
-                </Reveal>
+              <div className="mapBox">
+                <iframe
+                  title="Office map"
+                  className="mapBox__frame"
+                  src={useYandex ? yandexSrc : googleSrc}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
-            </form>
+
+              <div className="mapActions">
+<a
+  className="pill"
+  href="https://yandex.uz/maps/?ll=69.245303%2C41.312328&z=16&pt=69.245303,41.312328,pm2rdm"
+  target="_blank"
+  rel="noreferrer"
+>
+  {t("contact.map.open")}
+</a>
+
+              </div>
+            </div>
           </Reveal>
         </div>
       </Container>
     </section>
   );
 }
-
-const inputStyle = {
-  width: "100%",
-  padding: "12px 14px",
-  borderRadius: 14,
-  border: "1px solid var(--border)",
-  background: "rgba(255,255,255,0.04)",
-  color: "var(--text)",
-  outline: "none",
-};
