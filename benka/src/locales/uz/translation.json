@@ -181,6 +181,16 @@
       "addrLabel": "Manzil",
       "addr": "Toshkent, O‘zbekiston"
     },
+        "form": {
+      "title": "So‘rov qoldirish",
+      "desc": "Formani to‘ldiring, mutaxassisimiz siz bilan bog‘lanadi.",
+      "name": "Ismingiz",
+      "phone": "Telefon raqam",
+      "email": "Elektron pochta",
+      "message": "Izoh yoki loyiha tavsifi",
+      "submit": "So‘rov yuborish",
+      "sent": "Rahmat! So‘rovingiz muvaffaqiyatli yuborildi."
+    },
     "map": {
       "title": "Ofisimiz xaritada",
       "desc": "Marshrut tuzing va tashrif buyuring — sizni kutamiz.",

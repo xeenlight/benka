@@ -180,6 +180,17 @@
       "emailLabel": "Email",
       "addrLabel": "Address",
       "addr": "Tashkent, Uzbekistan"
+      
+    },
+    "form": {
+      "title": "Send a request",
+      "desc": "Fill out the form and our specialist will contact you.",
+      "name": "Your name",
+      "phone": "Phone number",
+      "email": "Email address",
+      "message": "Comment or project description",
+      "submit": "Submit request",
+      "sent": "Thank you! Your request has been sent successfully."
     },
     "map": {
       "title": "Our office on the map",

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Container from "../Ui/Container";
 import Button from "../Ui/Button";
 import "./Header.scss";
-import logo from "../../image/header_logo_down2.png";
+import logo from "../../image/header_logo_down4.png";
 const nav = [
   { to: "/about", key: "nav.about" },
   { to: "/services", key: "nav.services" },

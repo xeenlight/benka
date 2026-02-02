@@ -211,7 +211,7 @@ export default function Home() {
               <a className="pill" href="mailto:info@zikkurat.uz">
                 info@zikkurat.uz
               </a>
-              <Button variant="primary" onClick={() => (window.location.href = "/contact")}>
+              <Button variant="primary1" onClick={() => (window.location.href = "/contact")}>
                 {t("cta.contactUs")}
               </Button>
             </div>
