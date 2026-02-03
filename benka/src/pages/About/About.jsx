@@ -4,6 +4,9 @@ import Container from "../../components/Ui/Container";
 import Button from "../../components/Ui/Button";
 import "./About.scss";
 import Reveal from "../../components/Ui/Reveal/Reveal";
+import about from "../../image/about.mp4";
+
+
 
 export default function About() {
   const { t } = useTranslation();
@@ -39,8 +42,18 @@ export default function About() {
 
           <div className="about__heroRight">
             <div className="about__media">
-              {/* сюда потом поставишь фото/видео */}
-              <div className="about__mediaInner" />
+              <div className="about__mediaInner">
+  <video
+    className="about__video"
+    src={about}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+  />
+</div>
+
               <div className="about__mediaCaption">
                 <div className="about__mediaTitle">{t("aboutPage.media.title")}</div>
                 <div className="about__mediaText">{t("aboutPage.media.text")}</div>

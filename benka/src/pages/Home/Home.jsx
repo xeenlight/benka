@@ -4,6 +4,12 @@ import Container from "../../components/Ui/Container";
 import Button from "../../components/Ui/Button";
 import Reveal from "../../components/Ui/Reveal/Reveal";
 import "./Home.scss";
+import home from "../../image/home.mp4";
+import one from "../../image/one.mp4";
+import two from "../../image/two.mp4";
+import three from "../../image/three.mp4";
+
+const specVideos = [one, two, three];
 
 export default function Home() {
   const { t } = useTranslation();
@@ -60,14 +66,24 @@ export default function Home() {
 
           <div className="home__heroRight">
             <Reveal variant="scale" delay={120}>
-              <div className="home__heroCard">
-                {/* сюда потом подставишь картинку/видео как на оригинале */}
-                <div className="home__heroMedia" />
-                <div className="home__heroNote">
-                  <div className="home__heroNoteTitle">{t("home.heroCard.title")}</div>
-                  <div className="home__heroNoteText">{t("home.heroCard.text")}</div>
-                </div>
-              </div>
+<div className="home__heroCard">
+  <div className="home__heroMedia">
+    <video
+      className="home__heroVideo"
+      src={home}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  </div>
+
+  <div className="home__heroNote">
+    <div className="home__heroNoteTitle">{t("home.heroCard.title")}</div>
+    <div className="home__heroNoteText">{t("home.heroCard.text")}</div>
+  </div>
+</div>
             </Reveal>
           </div>
         </Container>
@@ -176,20 +192,32 @@ export default function Home() {
             <h2 className="home__h2">{t("home.specTitle")}</h2>
           </Reveal>
 
-          <div className="grid grid--3">
-            {specs.map((item, idx) => (
-              <Reveal key={`${item.title}-${idx}`} variant="up" delay={idx * 70}>
-                <div className="card card--media">
-                  <div className="card__media" />
-                  <div className="card__title">{item.title}</div>
-                  <div className="card__desc">{item.desc}</div>
-                  <a className="card__link" href="/projects">
-                    {t("home.viewProjects")} →
-                  </a>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+<div className="grid grid--3">
+  {specs.map((item, idx) => (
+    <Reveal key={`${item.title}-${idx}`} variant="up" delay={idx * 70}>
+      <div className="card card--media">
+        <div className="card__media">
+          <video
+            className="card__video"
+            src={specVideos[idx % specVideos.length]}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </div>
+
+        <div className="card__title">{item.title}</div>
+        <div className="card__desc">{item.desc}</div>
+        <a className="card__link" href="/projects">
+          {t("home.viewProjects")} →
+        </a>
+      </div>
+    </Reveal>
+  ))}
+</div>
+
         </Container>
       </section>
 

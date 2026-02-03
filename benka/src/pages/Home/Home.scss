@@ -161,6 +161,16 @@
 
 .link { color: var(--text); opacity: .9; }
 .pill {
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+.pillMap {
   width: 100%;
   justify-content: center;
   display: inline-flex;
@@ -190,4 +200,39 @@
   .home__finalInner { flex-direction: column; align-items: stretch; }
   .home__finalBtns { flex-direction: column; }
   .pill { width: 100%; justify-content: center; text-align: center; }
+}
+.home {
+  &__heroMedia {
+    position: relative;
+    width: 100%;
+
+
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+
+  }
+
+  &__heroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // чтобы красиво заполняло
+    display: block;
+  }
+}
+.card {
+  &__media {
+    position: relative;
+    width: 100%;
+    height: 180px; // подгони под дизайн
+
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // красиво заполняет карточку
+    display: block;
+  }
 }

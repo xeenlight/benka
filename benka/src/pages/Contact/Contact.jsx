@@ -147,7 +147,7 @@ export default function Contact() {
 
               <div className="mapActions">
                 <a
-                  className="pill"
+                  className="pillMap"
                   href="https://yandex.uz/maps/?ll=69.245303%2C41.312328&z=16&pt=69.245303,41.312328,pm2rdm"
                   target="_blank"
                   rel="noreferrer"

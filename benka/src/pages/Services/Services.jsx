@@ -5,6 +5,14 @@ import Button from "../../components/Ui/Button";
 import Reveal from "../../components/Ui/Reveal/Reveal";
 import "./Services.scss";
 
+import videoplayback from "../../image/videoplayback.mp4";
+
+import dicas from "../../image/dicas.jpg";
+import dicas2 from "../../image/dicas2.jpg";
+import dicas3 from "../../image/dicas3.jpeg";
+import dicas4 from "../../image/dicas4.png";
+
+
 import magnifier from "../../image/magnifier.png";
 import compas from "../../image/compas.png";
 import seoreport from "../../image/seoreport.png";
@@ -61,6 +69,8 @@ export default function Services() {
   const alsoIcons = [institute, medical, ball, factory];
 
 
+  const svcImages = [dicas, dicas2, dicas3, dicas4];
+
   return (
     <div className="servicesPage">
       {/* HERO */}
@@ -92,7 +102,18 @@ export default function Services() {
           </div>
 
           <Reveal variant="scale" delay={120} className="servicesPage__heroRight">
-            <div className="servicesPage__heroMedia" aria-hidden="true" />
+
+                          <div className="servicesPage__heroMedia" aria-hidden="true" >
+              <video
+                className="servicesPage__video"
+                src={videoplayback}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            </div>
           </Reveal>
         </Container>
       </section>
@@ -112,11 +133,17 @@ export default function Services() {
             {main.map((s, idx) => {
               const isTextLeft = idx % 2 === 1; // ✅ чередование
 
-              const Media = (
-                <div className="svcRow__media">
-                  <div className="svcRow__img" aria-hidden="true" />
-                </div>
-              );
+const Media = (
+  <div className="svcRow__media">
+    <img
+      src={svcImages[idx] || svcImages[0]}
+      alt={s.title}
+      className="svcRow__img"
+      loading="lazy"
+    />
+  </div>
+);
+
 
               const Content = (
                 <div className="svcRow__content">
