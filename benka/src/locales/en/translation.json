@@ -179,7 +179,10 @@
       "phoneLabel": "Phone",
       "emailLabel": "Email",
       "addrLabel": "Address",
-      "addr": "Tashkent, Uzbekistan"
+      "addr": "Tashkent, Uzbekistan",
+"qrTitle": "QR code for ordering",
+"qrDesc": "Scan to place an order."
+
       
     },
     "form": {

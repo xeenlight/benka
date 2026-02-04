@@ -43,6 +43,11 @@ import medical from "../../image/medical.png";
 import ball from "../../image/ball.png";
 import factory from "../../image/factory.png";
 
+
+import jk from "../../image/jk.jpg";
+import km from "../../image/km.jpg";
+import zv from "../../image/zv.jpg";
+
 export default function Services() {
   const { t } = useTranslation();
 
@@ -70,6 +75,8 @@ export default function Services() {
 
 
   const svcImages = [dicas, dicas2, dicas3, dicas4];
+
+    const objImages = [jk, km, zv];
 
   return (
     <div className="servicesPage">
@@ -321,7 +328,13 @@ const Media = (
               <Reveal key={`${tp.title}-${idx}`} variant="up" delay={idx * 90}>
                 <article className="typeCard2">
                   <div className="typeCard2__media">
-                    <div className="typeCard2__img" aria-hidden="true" />
+<div
+  className="typeCard2__img"
+  aria-hidden="true"
+  style={{
+    backgroundImage: `url(${objImages[idx] || objImages[0]})`,
+  }}
+/>
                     <div className="typeCard2__badge" aria-hidden="true">
 
                                             <div
@@ -398,7 +411,7 @@ const Media = (
                   {t("cta.consult")}
                 </Button>
                 <a className="pill" href="tel:+998998892586">
-                  (+99899) 889 25 86
+                  +998 (99) 889 25 86
                 </a>
               </div>
             </Reveal>
@@ -408,7 +421,7 @@ const Media = (
                 <div className="servicesPage__contactRow">
                   <div className="servicesPage__contactLabel">{t("servicesPage.cta.emailLabel")}</div>
                   <div>
-                    <a href="mailto:info@zikkurat.uz">info@zikkurat.uz</a>
+                    <a href="mailto:info@Benka.uz">info@Benka.uz</a>
                   </div>
                 </div>
               </Reveal>

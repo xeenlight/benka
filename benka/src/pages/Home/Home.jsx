@@ -8,6 +8,29 @@ import home from "../../image/home.mp4";
 import one from "../../image/one.mp4";
 import two from "../../image/two.mp4";
 import three from "../../image/three.mp4";
+import useCountUp from "../../hooks/useCountUp";
+import useInViewOnce from "../../hooks/useInViewOnce";
+
+
+function StatItem({ valueText, label, start, delay = 0 }) {
+  const target = parseInt(String(valueText).replace(/[^\d]/g, ""), 10) || 0;
+  const suffix = String(valueText).replace(/[\d\s]/g, ""); // например "+" если есть
+
+  const value = useCountUp(target, { duration: 3000, start });
+
+  return (
+    <Reveal variant="up" delay={delay}>
+      <div className="stat">
+        <div className="stat__n">
+          {value}
+          {suffix}
+        </div>
+        <div className="stat__t">{label}</div>
+      </div>
+    </Reveal>
+  );
+}
+
 
 const specVideos = [one, two, three];
 
@@ -18,6 +41,16 @@ export default function Home() {
   const reasons = t("home.why.items", { returnObjects: true }) || [];
   const steps = t("home.process.items", { returnObjects: true }) || [];
   const specs = t("home.spec.items", { returnObjects: true }) || [];
+
+
+const statsData = [
+  { n: t("home.stats.a.n"), t: t("home.stats.a.t") },
+  { n: t("home.stats.b.n"), t: t("home.stats.b.t") },
+  { n: t("home.stats.c.n"), t: t("home.stats.c.t") },
+];
+
+
+  const { ref: statsRef, inView } = useInViewOnce();
 
   return (
     <div className="home">
@@ -48,20 +81,18 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="home__stats">
-              {[
-                { n: t("home.stats.a.n"), t: t("home.stats.a.t") },
-                { n: t("home.stats.b.n"), t: t("home.stats.b.t") },
-                { n: t("home.stats.c.n"), t: t("home.stats.c.t") },
-              ].map((s, idx) => (
-                <Reveal key={idx} variant="up" delay={260 + idx * 80}>
-                  <div className="stat">
-                    <div className="stat__n">{s.n}</div>
-                    <div className="stat__t">{s.t}</div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+<div className="home__stats" ref={statsRef}>
+  {statsData.map((s, idx) => (
+    <StatItem
+      key={idx}
+      valueText={s.n}
+      label={s.t}
+      start={inView}
+      delay={260 + idx * 80}
+    />
+  ))}
+</div>
+
           </div>
 
           <div className="home__heroRight">

@@ -179,7 +179,10 @@
       "phoneLabel": "Telefon",
       "emailLabel": "Email",
       "addrLabel": "Manzil",
-      "addr": "Toshkent, O‘zbekiston"
+      "addr": "Toshkent, O‘zbekiston",
+"qrTitle": "Buyurtma uchun QR-kod",
+"qrDesc": "Buyurtma berish uchun skaner qiling."
+
     },
         "form": {
       "title": "So‘rov qoldirish",

@@ -6,6 +6,7 @@ import Button from "../Ui/Button";
 import "./Header.scss";
 import logo from "../../image/header_logo_down4.png";
 const nav = [
+  { to: "/", key: "nav.home" },
   { to: "/about", key: "nav.about" },
   { to: "/services", key: "nav.services" },
   { to: "/industries", key: "nav.industries" },
