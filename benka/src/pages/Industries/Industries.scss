@@ -1,0 +1,338 @@
+.industriesPage {
+  &__hero {
+    padding: 30px 0 18px;
+  }
+
+  &__heroInner {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 18px;
+    align-items: stretch;
+
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__kicker {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__h1 {
+    font-size: clamp(28px, 4vw, 46px);
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    font-weight: 1000;
+  }
+
+  &__lead {
+    margin: 0;
+    color: var(--muted);
+    max-width: 85ch;
+    line-height: 1.65;
+  }
+
+  &__heroBtns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+
+    @media (max-width: 360px) {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__heroMedia {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    min-height: 320px;
+    position: relative;
+  }
+
+  &__heroMediaInner {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    background:
+      radial-gradient(1200px 600px at 20% 20%, rgba(80,120,255,.16), transparent 60%),
+      radial-gradient(900px 500px at 80% 60%, rgba(60,200,140,.12), transparent 65%),
+      linear-gradient(135deg, rgba(255,255,255,.06), rgba(0,0,0,0));
+    transform: scale(1.02);
+  }
+
+  &__stats {
+    margin-top: 16px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 360px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__section {
+    padding: 30px 0;
+  }
+
+  &__sectionKicker {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__h2 {
+    font-size: clamp(22px, 2.4vw, 32px);
+    margin: 0;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+  }
+
+  &__muted {
+    margin: 10px 0 0;
+    color: var(--muted);
+    max-width: 90ch;
+    line-height: 1.7;
+  }
+
+  &__grid {
+    margin-top: 18px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__servicesGrid {
+    margin-top: 18px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__whySection {
+    padding-top: 0;
+  }
+
+  &__whyGrid {
+    margin-top: 18px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cta {
+    padding: 72px 0;
+  }
+
+  &__ctaInner {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 18px 46px rgba(0,0,0,0.22);
+  }
+
+  &__ctaTitle {
+    font-size: clamp(22px, 2.6vw, 34px);
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+  }
+
+  &__ctaBtns {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: 360px) {
+      flex-direction: column;
+      align-items: stretch;
+
+      .pill {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.iStat {
+  border: 1px solid rgba(120, 170, 255, 0.22);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+
+  &__n {
+    font-size: 22px;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+  }
+
+  &__t {
+    margin-top: 6px;
+    color: var(--muted);
+    line-height: 1.4;
+    font-size: 13px;
+  }
+}
+
+.indCard {
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+
+  &__media {
+    position: relative;     // ✅ важно
+    height: 190px;
+    overflow: hidden;       // ✅ важно
+    background: rgba(255,255,255,0.02);
+  }
+
+  // если это <img> или <video>
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;         // ✅ убирает "зазор снизу"
+    object-fit: cover;      // ✅ главное для ровной посадки
+    object-position: center;
+
+    transform: none;        // ❗ лучше убрать, из-за scale часто "криво"
+  }
+
+  &__body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+  }
+
+  &__desc {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  &__tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 170, 255, 0.18);
+  background: rgba(255,255,255,0.04);
+  color: rgba(230, 240, 255, 0.92);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.svcMini {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+
+  &__title {
+    font-weight: 1000;
+  }
+
+  &__desc {
+    margin-top: 8px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}
+
+.whyCard2 {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+
+  &__t {
+    font-weight: 1000;
+  }
+
+  &__d {
+    margin-top: 8px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}
+.industriesPage__heroMedia {
+  position: relative;
+  width: 100%;
+  height: 100%;          // важно
+  border-radius: 18px;
+  overflow: hidden;      // 🔥 обрезает видео по радиусу
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+
+.industriesPage__heroVideo {
+  position: absolute;   // 🔥
+  inset: 0;             // top/right/bottom/left = 0
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    // 🔥 ГЛАВНОЕ
+  display: block;
+}

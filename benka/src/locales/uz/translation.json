@@ -359,5 +359,134 @@
       "officeValue": "Toshkent, O‘zbekiston",
       "hoursValue": "Du-Ju: 9:00 - 18:00"
     }
+  },
+   "industriesPage": {
+    "kicker": "Kompleks injiniring yechimlari",
+    "title": "Biznesingiz uchun\nsohaviy yechimlar",
+    "lead": "Har bir soha uchun moslashtirilgan injiniring yechimlari. Biz 4 ta murakkablik toifasidagi obyektlarni yuqori samaradorlik va professionallik bilan loyihalaymiz.",
+    "btnProjects": "Loyihalarni ko‘rish",
+
+    "stats": [
+      { "n": "4", "t": "Murakkablik toifasi" },
+      { "n": "15+", "t": "Injiniring xizmatlari" },
+      { "n": "100%", "t": "Kompleks yondashuv" },
+      { "n": "24/7", "t": "Texnik qo‘llab-quvvatlash" }
+    ],
+
+    "solutionsKicker": "Barcha sohalar uchun yechimlar",
+    "solutionsTitle": "Turli sohalar uchun\nkompleks yechimlar",
+    "solutionsLead": "Biz har bir sohaning xususiyatlarini inobatga olgan holda to‘liq injiniring xizmatlarini taklif etamiz",
+    "solutions": [
+      {
+        "title": "Turar joy ko‘chmas mulki",
+        "desc": "Turar joy majmualari, ko‘p qavatli uylar va kottej shaharchalarini to‘liq injiniring infratuzilmasi bilan loyihalash",
+        "tags": ["Arxitektura", "Injiniring", "3D vizualizatsiya"]
+      },
+      {
+        "title": "Tijorat ko‘chmas mulki",
+        "desc": "Zamonaviy injiniring tizimlariga ega biznes markazlar, savdo markazlari va ofis binolari",
+        "tags": ["HVAC", "Elektr ta’minoti", "Yong‘in xavfsizligi"]
+      },
+      {
+        "title": "Sanoat va logistika",
+        "desc": "Ishlab chiqarish obyektlari, omborlar va logistika markazlari",
+        "tags": ["Texnologiyalar", "Bosh reja", "Konstruktsiyalar"]
+      },
+      {
+        "title": "Sog‘liqni saqlash",
+        "desc": "Maxsus talablarni hisobga olgan holda tibbiyot markazlari, shifoxonalar va poliklinikalar",
+        "tags": ["Ventilyatsiya", "Suv ta’minoti", "Signalizatsiya"]
+      },
+      {
+        "title": "Ta’lim",
+        "desc": "Zamonaviy infratuzilmaga ega maktablar, universitetlar, bog‘chalar va o‘quv markazlari",
+        "tags": ["Yoritish", "Xavfsizlik", "Aloqa"]
+      },
+      {
+        "title": "Mehmonxona biznesi",
+        "desc": "Yuqori qulaylik darajasiga ega mehmonxonalar, kurortlar va turistik majmualar",
+        "tags": ["Konditsioner", "Isitish", "Gaz ta’minoti"]
+      }
+    ],
+
+    "servicesKicker": "Xizmatlarning to‘liq spektri",
+    "servicesTitle": "Loyihangiz uchun\nkompleks injiniring xizmatlari",
+    "servicesLead": "Biz 4 ta murakkablik toifasidagi obyektlar bilan ishlaymiz. Professional jamoa, moslashuvchan yondashuv va yuqori sifat",
+    "services": [
+      {
+        "title": "Arxitektura va qurilish yechimlari",
+        "desc": "Norma va standartlarga mos arxitektura va qurilish yechimlarini ishlab chiqish"
+      },
+      {
+        "title": "Konstruktsiyalarni hisoblash",
+        "desc": "Tayanch konstruktsiyalar, poydevorlar va boshqa elementlarning professional hisob-kitoblari"
+      },
+      {
+        "title": "Elektr ta’minoti va elektr tizimlari",
+        "desc": "Elektr ta’minoti, elektr uskunalari va yoritish tizimlarini loyihalash"
+      },
+      {
+        "title": "Isitish, ventilyatsiya va konditsioner",
+        "desc": "Qulay mikroiqlimni ta’minlovchi zamonaviy HVAC tizimlari"
+      },
+      {
+        "title": "Suv ta’minoti va kanalizatsiya",
+        "desc": "Suv ta’minoti, oqova suv va tozalash tizimlarini loyihalash"
+      },
+      {
+        "title": "Issiqlik va gaz ta’minoti",
+        "desc": "Har qanday murakkablikdagi issiqlik va gaz ta’minoti yechimlari"
+      },
+      {
+        "title": "Yong‘in avtomatikasi va signalizatsiya",
+        "desc": "Yong‘in xavfsizligi, avtomatika va signalizatsiya tizimlarini loyihalash"
+      },
+      {
+        "title": "Aloqa va xavfsizlik tizimlari",
+        "desc": "Zamonaviy aloqa, telefon va qo‘riqlash tizimlari"
+      },
+      {
+        "title": "Bosh reja va 3D vizualizatsiya",
+        "desc": "Bosh reja, eskiz loyihalar va realistik 3D vizualizatsiya"
+      }
+    ],
+
+    "why": {
+      "kicker": "Bizning afzalliklarimiz",
+      "title": "Nima uchun bizni tanlashadi",
+      "lead": "Professionalizm, tajriba va har bir loyihaga individual yondashuv",
+      "items": [
+        {
+          "title": "Asoslangan injiniring yondashuvi",
+          "desc": "Har bir yechim hisob-kitoblar, me’yorlar va tajriba bilan asoslanadi"
+        },
+        {
+          "title": "Yuqori xizmat darajasi",
+          "desc": "Xalqaro standartlarga mos premium injiniring xizmatlari"
+        },
+        {
+          "title": "Moslashuvchan yechimlar",
+          "desc": "Murakkab texnik masalalar uchun optimal yechimlar"
+        },
+        {
+          "title": "Keng qamrovli mutaxassislik",
+          "desc": "Barcha injiniring yo‘nalishlarida chuqur bilimga ega jamoa"
+        },
+        {
+          "title": "4 murakkablik toifasi",
+          "desc": "Oddiydan tortib noyob loyihalargacha ishlaymiz"
+        },
+        {
+          "title": "To‘liq xizmat",
+          "desc": "Eskizdan mualliflik nazoratigacha to‘liq loyiha qo‘llab-quvvatlovi"
+        }
+      ]
+    },
+
+    "cta": {
+      "title": "Loyihangizni muhokama qilishga tayyormisiz?",
+      "lead": "Maslahat va tijorat taklifi uchun biz bilan bog‘laning",
+      "btn": "Biz bilan bog‘lanish"
+    }
   }
 }

@@ -360,5 +360,134 @@
       "officeValue": "Tashkent, Uzbekistan",
       "hoursValue": "Mon–Fri: 9:00 - 18:00"
     }
+  },
+    "industriesPage": {
+    "kicker": "Integrated engineering solutions",
+    "title": "Industry solutions for\nyour business",
+    "lead": "Tailored engineering solutions for every industry. We design facilities of all four complexity categories with maximum efficiency and professionalism.",
+    "btnProjects": "View projects",
+
+    "stats": [
+      { "n": "4", "t": "Complexity categories" },
+      { "n": "15+", "t": "Engineering services" },
+      { "n": "100%", "t": "Integrated approach" },
+      { "n": "24/7", "t": "Technical support" }
+    ],
+
+    "solutionsKicker": "Solutions for all industries",
+    "solutionsTitle": "Comprehensive solutions for\ndifferent industries",
+    "solutionsLead": "We provide a full range of engineering services tailored to the specific needs of each industry",
+    "solutions": [
+      {
+        "title": "Residential real estate",
+        "desc": "Design of residential complexes, apartment buildings and cottage communities with full engineering infrastructure",
+        "tags": ["Architecture", "Engineering", "3D visualization"]
+      },
+      {
+        "title": "Commercial real estate",
+        "desc": "Business centers, shopping malls and office buildings with modern engineering systems",
+        "tags": ["HVAC", "Power supply", "Fire safety"]
+      },
+      {
+        "title": "Industrial & logistics",
+        "desc": "Industrial facilities, warehouses and logistics centers",
+        "tags": ["Technology", "Master planning", "Structures"]
+      },
+      {
+        "title": "Healthcare",
+        "desc": "Medical centers, hospitals and clinics designed in accordance with specialized requirements",
+        "tags": ["Ventilation", "Water supply", "Alarm systems"]
+      },
+      {
+        "title": "Education",
+        "desc": "Schools, universities, kindergartens and educational centers with modern infrastructure",
+        "tags": ["Lighting", "Safety", "Communication"]
+      },
+      {
+        "title": "Hospitality",
+        "desc": "Hotels, resorts and tourism complexes with a high level of comfort",
+        "tags": ["Air conditioning", "Heating", "Gas supply"]
+      }
+    ],
+
+    "servicesKicker": "Full range of services",
+    "servicesTitle": "Comprehensive engineering services\nfor your project",
+    "servicesLead": "We work with all four complexity categories. Professional project teams, flexible approach and high-quality execution",
+    "services": [
+      {
+        "title": "Architectural & construction solutions",
+        "desc": "Development of complete architectural and construction solutions in compliance with regulations and standards"
+      },
+      {
+        "title": "Structural calculations",
+        "desc": "Professional calculations of load-bearing structures, foundations and structural elements"
+      },
+      {
+        "title": "Power supply & electrical systems",
+        "desc": "Design of power supply systems, electrical equipment and lighting"
+      },
+      {
+        "title": "Heating, ventilation & air conditioning",
+        "desc": "Modern HVAC systems to ensure a comfortable indoor climate"
+      },
+      {
+        "title": "Water supply & sewerage",
+        "desc": "Design of water supply, drainage and wastewater treatment systems"
+      },
+      {
+        "title": "Heat & gas supply",
+        "desc": "Engineering solutions for heating and gas supply systems of any complexity"
+      },
+      {
+        "title": "Fire protection & automation",
+        "desc": "Design of fire safety, automation and alarm systems"
+      },
+      {
+        "title": "Communication & security systems",
+        "desc": "Modern communication, telephony and security systems"
+      },
+      {
+        "title": "Master planning & 3D visualization",
+        "desc": "Development of master plans, concept designs and realistic 3D visualizations"
+      }
+    ],
+
+    "why": {
+      "kicker": "Our advantages",
+      "title": "Why choose us",
+      "lead": "Professional expertise, experience and an individual approach to every project",
+      "items": [
+        {
+          "title": "Well-grounded engineering approach",
+          "desc": "Every solution is supported by calculations, regulations and years of engineering experience"
+        },
+        {
+          "title": "High level of service",
+          "desc": "We provide premium engineering services in compliance with international standards"
+        },
+        {
+          "title": "Flexible problem-solving",
+          "desc": "We find optimal solutions even for the most complex technical challenges"
+        },
+        {
+          "title": "Broad team expertise",
+          "desc": "A professional team with deep expertise across all engineering disciplines"
+        },
+        {
+          "title": "4 complexity categories",
+          "desc": "We work with projects of all complexity levels — from simple to unique"
+        },
+        {
+          "title": "End-to-end service",
+          "desc": "From concept to supervision — full project support at every stage"
+        }
+      ]
+    },
+
+    "cta": {
+      "title": "Ready to discuss your project?",
+      "lead": "Contact us for a consultation and a commercial proposal",
+      "btn": "Contact us"
+    }
   }
 }
