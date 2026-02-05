@@ -24,6 +24,13 @@ import extinguisher from "../../image/extinguisher.png";
 import wifi from "../../image/wifi.png";
 import location from "../../image/location.png";
 
+import idea from "../../image/idea1.png";
+import diamond from "../../image/diamond.png";
+import puzzle from "../../image/puzzle.png";
+import selection from "../../image/selection.png";
+import categorization from "../../image/categorization.png";
+import badge from "../../image/badge.png";
+
 
 export default function Industries() {
   const { t } = useTranslation();
@@ -42,6 +49,8 @@ export default function Industries() {
   const images = [img1, img2, img3, img4, img5, img6];
 
   const serviceIcons = [compas, calculator, lightning, air, drops, heat, extinguisher, wifi, location];
+
+  const whyIcons = [idea, diamond, puzzle, selection, categorization, badge];
 
   return (
     <div className="industriesPage">
@@ -179,30 +188,43 @@ export default function Industries() {
       </section>
 
       {/* WHY */}
-      <section className="industriesPage__section industriesPage__whySection">
-        <Container>
-          <Reveal variant="up">
-            <div className="industriesPage__sectionKicker">{t("industriesPage.why.kicker")}</div>
-          </Reveal>
-          <Reveal variant="up" delay={80}>
-            <h2 className="industriesPage__h2">{t("industriesPage.why.title")}</h2>
-          </Reveal>
-          <Reveal variant="up" delay={140}>
-            <p className="industriesPage__muted">{t("industriesPage.why.lead")}</p>
-          </Reveal>
+<section className="industriesPage__section industriesPage__whySection">
+  <Container>
+    <Reveal variant="up">
+      <div className="industriesPage__sectionKicker">{t("industriesPage.why.kicker")}</div>
+    </Reveal>
+    <Reveal variant="up" delay={80}>
+      <h2 className="industriesPage__h2">{t("industriesPage.why.title")}</h2>
+    </Reveal>
+    <Reveal variant="up" delay={140}>
+      <p className="industriesPage__muted">{t("industriesPage.why.lead")}</p>
+    </Reveal>
 
-          <div className="industriesPage__whyGrid">
-            {why.map((w, idx) => (
-              <Reveal key={`${w.title}-${idx}`} variant="up" delay={idx * 80}>
-                <div className="whyCard2">
-                  <div className="whyCard2__t">{w.title}</div>
-                  <div className="whyCard2__d">{w.desc}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
+    {/* ВНЕШНЯЯ ПАНЕЛЬ */}
+    <div className="whyPanel2">
+      <div className="whyPanel2__grid">
+        {why.map((w, idx) => (
+          <Reveal key={`${w.title}-${idx}`} variant="up" delay={idx * 80}>
+            <article className="whyCard2" style={{ ["--d"]: `${idx * 40}ms` }}>
+              <div
+                className="whyCard2__icon"
+                aria-hidden="true"
+                style={{ ["--icon"]: `url(${whyIcons[idx] || whyIcons[0]})` }}
+              />
+
+              <div className="whyCard2__content">
+                <div className="whyCard2__t">{w.title}</div>
+                <div className="whyCard2__d">{w.desc}</div>
+              </div>
+
+            </article>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>
+
 
       {/* CTA */}
       <section className="industriesPage__cta">

@@ -11,7 +11,7 @@ export default function Contact() {
 
   // ✅ Яндекс карта по координатам офиса (Yandex любит: lng,lat)
   const yandexSrc =
-    "https://yandex.ru/map-widget/v1/?ll=69.245303%2C41.312328&z=16&pt=69.245303,41.312328,pm2rdm";
+    "https://yandex.ru/map-widget/v1/?ll=69.243867%2C41.266974&z=16&pt=69.243867,41.266974,pm2rdm";
 
   const [form, setForm] = useState({
     name: "",
@@ -166,7 +166,7 @@ export default function Contact() {
               <div className="mapActions">
                 <a
                   className="pillMap"
-                  href="https://yandex.uz/maps/?ll=69.245303%2C41.312328&z=16&pt=69.245303,41.312328,pm2rdm"
+                  href="https://yandex.uz/maps/?ll=69.243867%2C41.266974&z=16&pt=69.243867,41.266974,pm2rdm"
                   target="_blank"
                   rel="noreferrer"
                 >
