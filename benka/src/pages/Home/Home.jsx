@@ -11,6 +11,10 @@ import three from "../../image/three.mp4";
 import useCountUp from "../../hooks/useCountUp";
 import useInViewOnce from "../../hooks/useInViewOnce";
 
+import phone from "../../image/handshake.png";
+import doc from "../../image/building.png";
+import pen from "../../image/compas.png";
+import eye from "../../image/multiple.png";
 
 function StatItem({ valueText, label, start, delay = 0 }) {
   const target = parseInt(String(valueText).replace(/[^\d]/g, ""), 10) || 0;
@@ -51,6 +55,8 @@ const statsData = [
 
 
   const { ref: statsRef, inView } = useInViewOnce();
+
+  const processIcons = [phone, doc, pen, eye];
 
   return (
     <div className="home">
@@ -182,36 +188,53 @@ const statsData = [
       </section>
 
       {/* PROCESS */}
-      <section>
-        <Container>
-          <Reveal variant="up">
-            <div className="kicker">{t("home.processKicker")}</div>
-          </Reveal>
-          <Reveal variant="up" delay={60}>
-            <h2 className="home__h2">{t("home.processTitle")}</h2>
-          </Reveal>
+<section className="homeProcess">
+  <Container>
+    <Reveal variant="up">
+      <div className="kicker">{t("home.processKicker")}</div>
+    </Reveal>
 
-          <div className="steps">
-            {steps.map((item, idx) => (
-              <Reveal key={`${item.n}-${idx}`} variant="up" delay={idx * 80}>
-                <div className="step">
-                  <div className="step__n">{item.n}</div>
-                  <div className="step__t">{item.title}</div>
-                  <div className="step__d">{item.desc}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+    <Reveal variant="up" delay={60}>
+      <h2 className="home__h2">{t("home.processTitle")}</h2>
+    </Reveal>
 
-          <Reveal variant="up" delay={120}>
-            <div style={{ marginTop: 18 }}>
-              <Button variant="primary" onClick={() => (window.location.href = "/contact")}>
-                {t("cta.startProject")}
-              </Button>
+
+
+    <div className="homeProcess__rail" aria-hidden="true" />
+
+    <div className="homeProcess__grid">
+      {steps.map((item, idx) => (
+        <Reveal key={`${item.n}-${idx}`} variant="up" delay={160 + idx * 90}>
+          <article className="pStep" style={{ ["--d"]: `${idx * 60}ms` }}>
+            <div className="pStep__top">
+              <div className="pStep__num">{String(idx + 1).padStart(2, "0")}</div>
+
+              <div
+                className="pStep__miniIcon"
+                aria-hidden="true"
+                style={{ ["--icon"]: `url(${processIcons[idx] || processIcons[0]})` }}
+              />
             </div>
-          </Reveal>
-        </Container>
-      </section>
+
+            <div className="pStep__t">{item.title}</div>
+            <div className="pStep__d">{item.desc}</div>
+
+            {/* маленький коннектор вправо (как на картинке) */}
+            <div className="pStep__connector" aria-hidden="true" />
+          </article>
+        </Reveal>
+      ))}
+    </div>
+
+    <Reveal variant="up" delay={240}>
+      <div className="homeProcess__cta">
+        <Button variant="primary" onClick={() => (window.location.href = "/contact")}>
+          {t("cta.startProject")} <span aria-hidden="true">→</span>
+        </Button>
+      </div>
+    </Reveal>
+  </Container>
+</section>
 
       {/* SPECIALIZATION */}
       <section>

@@ -236,3 +236,196 @@
     display: block;
   }
 }
+/* ===== Process section (premium rail) ===== */
+.homeProcess {
+  padding: 72px 0;
+  position: relative;
+
+  &__lead {
+    margin: 10px 0 0;
+    color: var(--muted);
+    max-width: 70ch;
+  }
+
+  /* линия за карточками */
+  &__rail {
+    margin-top: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(120, 170, 255, 0.22);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(120, 170, 255, 0.85);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: processRail 900ms ease forwards;
+    }
+  }
+
+  @keyframes processRail { to { transform: scaleX(1); } }
+
+  &__grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cta {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* карточка шага */
+.pStep {
+  position: relative;
+  border-radius: 20px;
+  padding: 18px;
+  min-height: 190px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(120,170,255,0.18);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+  overflow: hidden;
+
+  animation: pStepIn 520ms ease both;
+  animation-delay: var(--d, 0ms);
+
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(120,170,255,0.38);
+    box-shadow: 0 22px 60px rgba(0,0,0,0.30);
+  }
+
+  /* glow + shine */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -120px -160px auto auto;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at 30% 30%, rgba(120,170,255,0.22), transparent 60%);
+    transform: rotate(14deg);
+    pointer-events: none;
+    opacity: .85;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.08) 40%, transparent 70%);
+    transform: translateX(-120%);
+    opacity: .6;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    transform: translateX(120%);
+    transition: transform 900ms ease;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* круг с номером как на примере */
+  &__num {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 1000;
+
+    background: rgba(90, 140, 220, 0.18);
+    border: 1px solid rgba(90, 140, 220, 0.35);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.22);
+    color: rgba(230,240,255,0.95);
+  }
+
+  /* маленькая иконка справа сверху (mask) */
+  &__miniIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(120,170,255,0.18);
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  &__miniIcon::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--accent-gradient);
+
+    -webkit-mask-image: var(--icon);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-image: var(--icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &__t {
+    margin-top: 14px;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+  }
+
+  &__d {
+    margin-top: 8px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+    max-width: 46ch;
+  }
+
+  /* коннектор вправо (между карточками) */
+  &__connector {
+    position: absolute;
+    right: -16px;
+    top: 44px;
+    width: 16px;
+    height: 2px;
+    background: rgba(120,170,255,0.38);
+  }
+
+  /* на последней не нужен */
+  &:last-child &__connector { display: none; }
+
+  @media (max-width: 560px) {
+    &__connector { display: none; } /* на мобиле без линии */
+  }
+}
+
+@keyframes pStepIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
