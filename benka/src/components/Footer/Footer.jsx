@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="footer__col">
           <div className="footer__title">{t("footer.contactsTitle")}</div>
           <a href="tel:+998998892586">(+99899) 889 25 86</a>
-          <a href="mailto:info@zikkurat.uz">info@zikkurat.uz</a>
+          <a href="mailto:info@benka.uz">info@benka.uz</a>
           <div className="footer__muted">{t("footer.address")}</div>
         </div>
 

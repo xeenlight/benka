@@ -14,6 +14,17 @@ import img5 from "../../image/5.png";
 import img6 from "../../image/6.png";
 
 
+import compas from "../../image/compas.png";
+import calculator from "../../image/calculator.png";
+import lightning from "../../image/lightning.png";
+import air from "../../image/air.png";
+import drops from "../../image/drops.png";
+import heat from "../../image/heat.png";
+import extinguisher from "../../image/extinguisher.png";
+import wifi from "../../image/wifi.png";
+import location from "../../image/location.png";
+
+
 export default function Industries() {
   const { t } = useTranslation();
 
@@ -29,6 +40,8 @@ export default function Industries() {
   const why = Array.isArray(whyRaw) ? whyRaw : [];
 
   const images = [img1, img2, img3, img4, img5, img6];
+
+  const serviceIcons = [compas, calculator, lightning, air, drops, heat, extinguisher, wifi, location];
 
   return (
     <div className="industriesPage">
@@ -144,16 +157,24 @@ export default function Industries() {
             <p className="industriesPage__muted">{t("industriesPage.servicesLead")}</p>
           </Reveal>
 
-          <div className="industriesPage__servicesGrid">
-            {services.map((s, idx) => (
-              <Reveal key={`${s.title}-${idx}`} variant="up" delay={idx * 70}>
-                <div className="svcMini">
-                  <div className="svcMini__title">{s.title}</div>
-                  <div className="svcMini__desc">{s.desc}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+<div className="industriesPage__servicesGrid">
+  {services.map((s, idx) => (
+    <Reveal key={`${s.title}-${idx}`} variant="up" delay={idx * 70}>
+      <div className="svcMini">
+        {/* ICON */}
+        <div
+          className="svcMini__icon"
+          aria-hidden="true"
+          style={{ ["--icon"]: `url(${serviceIcons[idx] || serviceIcons[0]})` }}
+        />
+
+        <div className="svcMini__title">{s.title}</div>
+        <div className="svcMini__desc">{s.desc}</div>
+      </div>
+    </Reveal>
+  ))}
+</div>
+
         </Container>
       </section>
 
