@@ -184,8 +184,8 @@ export default function Header() {
             <a className="menuPanel__pill" href="tel:+998998892586">
               (+99899) 889 25 86
             </a>
-            <a className="menuPanel__pill" href="mailto:info@zikkurat.uz">
-              info@zikkurat.uz
+            <a className="menuPanel__pill" href="mailto:info@benka.uz">
+              info@benka.uz
             </a>
           </div>
         </div>

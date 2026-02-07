@@ -290,8 +290,8 @@ const statsData = [
               <a className="pill" href="tel:+998998892586">
                 (+99899) 889 25 86
               </a>
-              <a className="pill" href="mailto:info@zikkurat.uz">
-                info@zikkurat.uz
+              <a className="pill" href="mailto:info@benka.uz">
+                info@benka.uz
               </a>
               <Button variant="primary1" onClick={() => (window.location.href = "/contact")}>
                 {t("cta.contactUs")}

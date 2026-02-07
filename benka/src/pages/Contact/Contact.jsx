@@ -61,7 +61,7 @@ export default function Contact() {
 
                 <div className="contactMeta__row">
                   <b>{t("contact.info.emailLabel")}:</b>{" "}
-                  <a href="mailto:info@zikkurat.uz">info@zikkurat.uz</a>
+                  <a href="mailto:info@benka.uz">info@benka.uz</a>
                 </div>
 
                 <div className="contactMeta__row">
